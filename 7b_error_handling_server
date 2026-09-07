@@ -11,9 +11,9 @@ app = Flask("Emotion Detector")
 
 @app.route("/emotionDetector")
 def emotion_detection():
-    ''' This code receives the text from the HTML interface and 
-        runs emotion analysis over it using the emotion_detector() 
-        function. The output returned shows each emotion's score 
+    ''' This code receives the text from the HTML interface and
+        runs emotion analysis over it using the emotion_detector()
+        function. The output returned shows each emotion's score
         and the dominant emotion for the provided text.
     '''
     text_to_analyze = request.args.get("textToAnalyze")
@@ -42,6 +42,5 @@ def render_index_page():
 
 
 if __name__ == "__main__":
-    ''' This functions executes the flask app and deploys it on localhost:8889
-    '''
+    # This executes the flask app and deploys it on localhost:8889
     app.run(host="0.0.0.0", port=8889)
